@@ -1,0 +1,22 @@
+﻿@model SeawavesCompo.DataAccess.Competition
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+
+<div class="col-md-12" style="background-color: lavender">
+    <h2>Compete in battle</h2>
+    </br>
+    <h4>@Model.Title</h4>
+    <h4>hosted by @Model.User.UserHandle</h4>
+    <hr />
+    <div class="col-md-12">
+        @foreach (var c in Model.CompoPacks)
+        {
+            <div class="col-md-12">@c.Instructions</div>
+            <div class="col-md-12">@c.CompoPackLink</div>
+        }
+    </div>
+    <h4>@Html.ActionLink("Submit entry", "Index")</h4>
+</div>

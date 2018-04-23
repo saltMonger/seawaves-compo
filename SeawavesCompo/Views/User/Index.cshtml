@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SeawavesCompo.DataAccess.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VaporAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AetherAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserHandle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VaporAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AetherAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserHandle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUser.Email)
+        </td>
+        <td>
+            @Html.ActionLink("UserPage", "User", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

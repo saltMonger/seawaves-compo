@@ -1,0 +1,39 @@
+﻿@model SeawavesCompo.DataAccess.Competition
+@{
+    ViewBag.Title = "View";
+}
+
+<div class="col-md-12" style="background-color: lavender">
+
+    <h2>@Model.Title hosted by @Model.User.UserHandle</h2>
+
+    <div class="col-md-12">
+        <h4>RULES</h4>
+        <div class="col-md-12">
+            @foreach (var compopack in Model.CompoPacks)
+        {
+            <p class="col-md-12">
+                @compopack.Instructions
+                @compopack.CompoPackLink
+            </p>
+    }
+        </div>
+
+        <h4>ENTRIES</h4>
+        @foreach (var entry in Model.Entries)
+        {
+        @*<div class="col-md-12" style="background-color: lavender">*@
+        <div class="col-md-4" style="color: ghostwhite">@entry.User.UserHandle<img src=@entry.User.Avatar /></div>
+        <div class="col-md-8" style="color: ghostwhite">
+            <p>
+                @entry.Title
+            </p>
+            <p>
+                @entry.PermanentURL
+            </p>
+        </div>
+        @*</div>*@
+         }
+
+    </div>
+</div>

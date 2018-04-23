@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+@Scripts.Render("~/bundles/CompetitionHost")
+
+<div class="container">
+    <div class="row">
+        <div id="createControls" class="col-md-12">
+            @*<div class="col-md-12">
+                <div class="col-md-4" id="compoLength" data-bind="value: CL()" />
+                <div class="col-md-8" data-bind="text: function(){TranslateToTime(CL())}"></div>
+            </div>*@
+            <div class="col-md-12">
+                <div>
+                    <input id="compoDate" type="text" data-bind="value: CompoStartDate()" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The type for column CompoLength in table [dbo].[Competition] is currently  DATETIMEOFFSET (7) NULL but is being changed
+         to  DATETIME NULL. Data loss could occur.
+       The type for column CompoStartDate in table [dbo].[Competition] is currently  DATETIMEOFFSET (7) NULL but is being
+         changed to  DATETIME NULL. Data loss could occur.
+       The type for column VoteLength in table [dbo].[Competition] is currently  DATETIMEOFFSET (7) NULL but is being changed
+         to  DATETIME NULL. Data loss could occur.
+
+** User actions
+     Alter
+       [dbo].[Competition] (Table)
+
+** Supporting actions
+
+The type for column CompoLength in table [dbo].[Competition] is currently  DATETIMEOFFSET (7) NULL but is being changed to  DATETIME NULL. Data loss could occur.
+The type for column CompoStartDate in table [dbo].[Competition] is currently  DATETIMEOFFSET (7) NULL but is being changed to  DATETIME NULL. Data loss could occur.
+The type for column VoteLength in table [dbo].[Competition] is currently  DATETIMEOFFSET (7) NULL but is being changed to  DATETIME NULL. Data loss could occur.
+

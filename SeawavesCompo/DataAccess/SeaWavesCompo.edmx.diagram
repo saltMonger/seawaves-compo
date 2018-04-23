@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="03412a1a94f044f28b4200bc39a3c879" Name="Diagram1">
+        <EntityTypeShape EntityType="SeaWavesDBModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeaWavesDBModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeaWavesDBModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeaWavesDBModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeaWavesDBModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeaWavesDBModel.User" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="SeaWavesDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="SeaWavesDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="SeaWavesDBModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SeaWavesDBModel.C__RefactorLog" Width="1.5" PointX="5.375" PointY="6.75" />
+        <AssociationConnector Association="SeaWavesDBModel.FK_User_AspNetUsers" />
+        <EntityTypeShape EntityType="SeaWavesDBModel.CompoPack" Width="1.5" PointX="7.25" PointY="9.125" />
+        <EntityTypeShape EntityType="SeaWavesDBModel.Entry" Width="1.5" PointX="7.375" PointY="0.75" />
+        <AssociationConnector Association="SeaWavesDBModel.FK_AuthorUserID" />
+        <EntityTypeShape EntityType="SeaWavesDBModel.Competition" Width="1.5" PointX="5" PointY="8.875" />
+        <AssociationConnector Association="SeaWavesDBModel.FK_BoundCompetitionID" />
+        <AssociationConnector Association="SeaWavesDBModel.FK_CompetitionID" />
+        <AssociationConnector Association="SeaWavesDBModel.FK_HostUserID" />
+        <EntityTypeShape EntityType="SeaWavesDBModel.UserVote" Width="1.5" PointX="7.375" PointY="5.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

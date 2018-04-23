@@ -1,0 +1,60 @@
+﻿@model SeawavesCompo.Models.UserModels.UserProfileFullModel
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_AuthenticatedLayout.cshtml";
+}
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/User/UserPage")
+
+<h2>@Model.UserHandle</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Bio
+                    @if (ViewBag.AbleToEditPage == true)
+                    {
+                        <button class="btn btn-default" id="toggleEditMode" type="button">Edit!</button>
+                        <button class="btn btn-default" id="submitEdit" type="button" disabled>Save!</button>
+                    }
+                </div>
+                @if(ViewBag.AbleToEditPage == true)
+                {
+                    <textarea id="userBioEditable" class="panel-body" hidden>
+                    </textarea>
+                    <div id="userBio" class="panel-body">
+                    </div>
+                }
+                else{ 
+                    <div id="userBio" class="panel-body">
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var model = null;
+    function loadInitialData() {
+
+        $.ajax({
+            url: '../../api/User/TestEndpoint',
+            success: function (data) {
+                console.log("get request success");
+            }
+        });
+        //grab model from razor
+        model = @Html.Raw(Json.Encode(Model));
+
+        //set user data containers
+        console.log(model);
+        $("#userBio").text(model.ProfileText);
+
+        //other containers
+    }
+</script>

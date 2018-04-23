@@ -1,0 +1,4 @@
+# ignore configs
+SeawavesCompo/Web.Debug.config
+SeawavesCompo/Web.Release.config
+SeawavesCompo/Web.config

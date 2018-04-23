@@ -1,0 +1,17 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[User]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[User] (Table)
+     Create
+       [dbo].[FK_User_AspNetUsers] (Foreign Key)
+
+** Supporting actions

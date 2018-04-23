@@ -1,0 +1,6 @@
+C:\Users\Sean\source\repos\SeawavesCompo\SeawavesCompo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Sean\source\repos\SeawavesCompo\SeawavesCompo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Sean\source\repos\SeawavesCompo\SeawavesCompo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Sean\source\repos\SeawavesCompo\SeawavesCompo\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Sean\source\repos\SeawavesCompo\SeawavesCompo\bin\roslyn\System.IO.Compression.dll
+C:\Users\Sean\source\repos\SeawavesCompo\SeawavesCompo\bin\roslyn\VBCSCompiler.exe

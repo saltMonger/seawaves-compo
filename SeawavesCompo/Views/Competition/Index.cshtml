@@ -1,0 +1,74 @@
+﻿@model IEnumerable<SeawavesCompo.DataAccess.Competition>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Host a Competition", "Host")
+</p>
+
+<!-- UPCOMING COMPETITONS-->
+<div class="col-md-12" style="background-color: lavender">
+    <h4>COMPETE NOW!</h4>
+    <div class="col-md-12">
+        @foreach (var c in Model)
+        {
+            <div class="col-md-12">
+                @if (c.CurrentPhase == 1)
+                {
+                    <div class="col-md-12">
+                        <div class="col-md-4">@Html.ActionLink(c.Title, "Compete", new { id = c.Id })</div>
+                        <div class="col-md-8">| hosted by: @c.User.UserHandle</div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+    <br />
+    <br />
+
+    <h4>VOTE NOW!</h4>
+    <div class="col-md-12">
+        @foreach (var c in Model)
+        {
+            if (c.CurrentPhase == 2)
+            {
+                <div class="col-md-12">
+                    <div class="col-md-4">@Html.ActionLink(c.Title, "Vote", new { id = c.Id })</div>
+                    <div class="col-md-8">| hosted by: @c.User.UserHandle</div>
+                </div>
+            }
+        }
+    </div>
+    <br />
+    <h4>UPCOMING</h4>
+    <div class="col-md-12">
+        @foreach (var c in Model)
+        {
+            if (c.CurrentPhase == 0)
+            {
+                <div class="col-md-12">
+                    <div class="col-md-4">@c.Title</div>
+                    <div class="col-md-8">| hosted by: @c.User.UserHandle</div>
+                </div>
+            }
+        }
+    </div>
+    <br />
+    <h4>ARCHIVE</h4>
+    <div class="col-md-12">
+        @foreach (var c in Model)
+        {
+            if (c.CurrentPhase == 3)
+            {
+                <div class="col-md-12">
+                    <div class="col-md-4">@Html.ActionLink(c.Title, "View", new { id = c.Id })</div>
+                    <div class="col-md-8">| hosted by: @c.User.UserHandle</div>
+                </div>
+            }
+        }
+    </div>
+</div>
